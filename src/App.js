@@ -6,10 +6,9 @@ import { Route, Routes } from "react-router-dom";
 import ProductList from "./components/ProductList/ProductList";
 import Forms from "./components/Forms/Forms";
 
-
 function App() {
-  const {onToggleButton, tg} = useTelegram()
-  
+  const { onToggleButton, tg } = useTelegram();
+
   useEffect(() => {
     tg.ready();
   }, []);
@@ -18,8 +17,8 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-      <Route index element={<ProductList />}/>
-        <Route path={'form'} element={<Forms />}/>
+        <Route index element={<ProductList />} />
+        <Route path={"form"} element={<Forms />} />
       </Routes>
     </div>
   );
